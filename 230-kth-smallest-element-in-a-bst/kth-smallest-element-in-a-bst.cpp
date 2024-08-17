@@ -13,7 +13,7 @@ class Solution {
 public:
 
     void smallest(TreeNode* root, int k, int& ksmallest, int& counter){
-        if(root == nullptr || counter>=k)return;
+        if(root == nullptr || counter>k)return;
 
         smallest(root->left, k, ksmallest, counter);
 
