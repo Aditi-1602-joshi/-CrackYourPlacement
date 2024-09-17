@@ -5,10 +5,10 @@ public:
         vector<vector<int>> dist(n,vector<int>(n,1e9));
         
         queue<pair<int,pair<int,int>>> q;
-        if(n == 1 && grid[0][0] == 0)return 1;
-        if(n == 1 && grid[0][0] == 1) return -1;
+        if(n == 1 && grid[0][0] == 0)return 1;//if one cell and its 0
+        if(n == 1 && grid[0][0] == 1) return -1;//if one cell and its 1
         
-        if(grid[n-1][n-1] == 1 || grid[0][0] == 1)return -1;
+        if(grid[n-1][n-1] == 1 || grid[0][0] == 1)return -1;//if start or/and dest = 1
 
         q.push({1,{0,0}});
         dist[0][0] = 1;
